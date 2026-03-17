@@ -3,7 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CSE Boulanger Compiègne</title>
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self' fonts.googleapis.com fonts.gstatic.com; style-src 'self' 'unsafe-inline' fonts.googleapis.com; script-src 'self' 'unsafe-inline'; img-src 'self' data: https:; connect-src 'none'; frame-ancestors 'none'; object-src 'none'; base-uri 'self';">
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="X-Frame-Options" content="DENY">
+<title>CSE Boulanger Compiègne — Espace Collaborateurs</title>
+<meta name="description" content="Accès réservé — collaborateurs Boulanger Compiègne uniquement.">
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
 <style>
 :root {
@@ -200,41 +206,6 @@ header {
 .prix-eco-num { font-weight: 800; font-size: 1.6rem; color: #4ADE80; display: block; line-height: 1; }
 .prix-eco-lbl { font-size: .6rem; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-top: 4px; display: block; font-weight: 600; }
 
-/* Séances */
-.seances-box { background: #fff; border: 1px solid var(--card-border); border-radius: 18px; overflow: hidden; box-shadow: 0 2px 12px rgba(28,16,9,0.05); }
-.seances-box-head { display: flex; align-items: center; justify-content: space-between; padding: 16px 22px; border-bottom: 1px solid var(--card-border); flex-wrap: wrap; gap: 10px; background: var(--bg); }
-.live-ind { display: flex; align-items: center; gap: 6px; font-size: .7rem; color: var(--text-faint); }
-.live-dot { width: 7px; height: 7px; border-radius: 50%; background: #4ADE80; animation: pulse 2s infinite; }
-.cine-addr { font-size: .68rem; color: var(--text-faint); margin-top: 1px; }
-.seances-box-body { padding: 18px 22px; }
-.days-nav { display: flex; gap: 5px; margin-bottom: 16px; flex-wrap: wrap; }
-.day-btn { background: var(--bg); border: 1px solid var(--card-border); color: var(--text-soft); font-weight: 600; font-size: .7rem; padding: 7px 14px; border-radius: 8px; transition: all .15s; cursor: pointer; }
-.day-btn:hover,.day-btn.on { background: var(--orange); border-color: var(--orange); color: #fff; }
-.films-list { display: flex; flex-direction: column; gap: 7px; margin-bottom: 22px; }
-.film-item { background: var(--bg); border: 1px solid var(--card-border); border-radius: 12px; padding: 14px 16px; display: grid; grid-template-columns: 50px 1fr auto; align-items: center; gap: 14px; transition: all .18s; }
-.film-item:hover { background: #fff; border-color: rgba(240,78,0,0.16); box-shadow: 0 3px 12px rgba(240,78,0,0.07); }
-.film-thumb { width: 50px; height: 70px; border-radius: 7px; background: var(--bg2); display: flex; align-items: center; justify-content: center; font-size: 1.4rem; overflow: hidden; flex-shrink: 0; }
-.film-thumb img { width: 100%; height: 100%; object-fit: cover; border-radius: 7px; }
-.film-title { font-weight: 700; font-size: .88rem; color: var(--noir); margin-bottom: 4px; display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
-.tag-genre { font-size: .56rem; font-weight: 700; padding: 2px 7px; border-radius: 100px; background: rgba(240,78,0,0.07); color: var(--orange); border: 1px solid rgba(240,78,0,0.12); }
-.tag-age { font-size: .56rem; font-weight: 700; padding: 2px 7px; border-radius: 100px; background: rgba(212,20,90,0.07); color: var(--rose); border: 1px solid rgba(212,20,90,0.14); }
-.film-meta { display: flex; gap: 8px; flex-wrap: wrap; font-size: .7rem; color: var(--text-faint); }
-.horaires-wrap { display: flex; flex-direction: column; gap: 4px; align-items: flex-end; }
-.jour-label { font-size: .6rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--text-faint); margin-bottom: 1px; text-align: right; }
-.slots { display: flex; gap: 3px; flex-wrap: wrap; justify-content: flex-end; }
-.slot { display: inline-flex; align-items: center; gap: 2px; font-weight: 700; font-size: .68rem; background: rgba(240,78,0,0.06); border: 1px solid rgba(240,78,0,0.13); color: var(--orange); padding: 4px 9px; border-radius: 7px; cursor: pointer; transition: all .14s; text-decoration: none; }
-.slot:hover { background: var(--orange); color: #fff; }
-.ver { font-size: .54rem; background: rgba(240,78,0,0.08); border-radius: 3px; padding: 1px 3px; font-weight: 700; }
-.ver.ice { background: rgba(0,105,168,0.08); color: var(--bleu); }
-.seances-error { text-align: center; padding: 40px; color: var(--text-soft); }
-.seances-loading { text-align: center; padding: 48px 32px; color: var(--text-soft); }
-.spinner { display: inline-block; width: 26px; height: 26px; border: 2px solid rgba(240,78,0,0.15); border-top-color: var(--orange); border-radius: 50%; animation: spin .7s linear infinite; margin-bottom: 8px; }
-@keyframes spin { to{transform:rotate(360deg)} }
-.btn-retry { display: inline-flex; align-items: center; gap: 5px; margin-top: 14px; background: rgba(240,78,0,0.07); color: var(--orange); font-weight: 700; font-size: .78rem; padding: 9px 16px; border-radius: 9px; border: 1px solid rgba(240,78,0,0.14); cursor: pointer; }
-.seances-empty-cta { display:inline-flex;align-items:center;gap:9px;background:var(--orange);color:#fff;font-weight:700;font-size:.9rem;padding:13px 24px;border-radius:12px;text-decoration:none; }
-.seances-empty-cta:hover { background: var(--orange2); }
-
-
 /* Table */
 .tbl-wrap { overflow-x: auto; border-radius: 14px; border: 1px solid var(--card-border); }
 table { width: 100%; border-collapse: collapse; background: #fff; border-radius: 14px; overflow: hidden; }
@@ -395,11 +366,117 @@ footer span { color: var(--orange); font-weight: 700; }
   .cinema-prix-bloc { flex-direction: row; }
   .av-grid { grid-template-columns: 1fr; }
   .store-infos { grid-template-columns: 1fr 1fr; }
-  .film-item { grid-template-columns: 42px 1fr; }
-  .horaires-wrap { display: none; }
   .f-row { grid-template-columns: 1fr; }
   .genre-bar-wrap { flex-wrap: wrap; }
   .solidarite-card { flex-direction: column; text-align: center; }
+  /* Section padding réduit */
+  .section { padding: 0 18px 52px; }
+  .solidarite-banner { padding: 0 18px 32px; }
+  /* Numéro B card */
+  #section-contacts > div[style*="linear-gradient(135deg,#3a6b35"] {
+    flex-direction: column; text-align: center; padding: 20px 18px; gap: 16px;
+  }
+  /* Numéro B → numéro ne déborde pas */
+  #section-contacts > div[style*="linear-gradient(135deg,#3a6b35"] span[style*="1.5rem"] {
+    font-size: 1.1rem !important; word-break: break-all;
+  }
+  /* Referents harcelement card → colonne */
+  #section-contacts > div[style*="linear-gradient(135deg,#1a0012"] {
+    flex-direction: column; padding: 20px 18px; gap: 16px;
+  }
+  /* Harcelement pills → flex-wrap forcé */
+  #section-contacts > div[style*="linear-gradient(135deg,#1a0012"] div[style*="gap:10px"] {
+    flex-wrap: wrap !important;
+  }
+  /* Recovery Mass bandeau → colonne */
+  #section-recovery > div[style*="linear-gradient(135deg,#0A3D1F"] {
+    flex-direction: column; padding: 22px 18px; gap: 18px;
+  }
+  /* Recovery Mass grille tarifs → 1 colonne */
+  #section-recovery > div[style*="minmax(280px"] {
+    grid-template-columns: 1fr !important;
+  }
+  /* Recovery Mass infos pratiques → colonne */
+  #section-recovery > div[style*="flex-wrap:wrap;gap:28px"] {
+    flex-direction: column; gap: 16px;
+  }
+  /* Idee box */
+  .idee-box { padding: 22px 18px; }
+  /* Store card */
+  .store-body { padding: 18px; }
+  .store-header { padding: 18px; }
+  /* Cinema hero overlay text */
+  #section-cinema > div > div[style*="position:absolute;bottom:0"] {
+    padding: 16px 18px; flex-direction: column; align-items: flex-start;
+  }
+  /* Modal */
+  .modal { padding: 24px 18px; }
+}
+@media (max-width: 480px) {
+  .store-infos { grid-template-columns: 1fr; }
+  .logo-cse-label strong { font-size: 1.35rem; }
+  .logo-cse-label small { font-size: .9rem; letter-spacing: 1.5px; }
+  /* Numéro B phone button full width */
+  #section-contacts > div[style*="linear-gradient(135deg,#3a6b35"] a[href^="tel"] {
+    width: 100%; justify-content: center;
+  }
+  /* Recovery Mass boutons */
+  #section-recovery > div[style*="linear-gradient(135deg,#0A3D1F"] > div:last-of-type {
+    width: 100%;
+  }
+  /* Birthday badges truncate */
+  .birthday-badge { font-size: .55rem; padding: 3px 7px; }
+  /* CSE pills wrap nicely */
+  .cse-prenoms { gap: 7px; }
+  .cse-pill { padding: 7px 15px; font-size: .82rem; }
+  /* Gear wrapper reduced padding */
+  .gear-wrapper { padding: 22px 18px; gap: 24px; }
+  /* Social cards full width */
+  .social-card { max-width: 100%; }
+  /* Hero padding mobile */
+  .hero { padding: 36px 18px 32px; }
+  /* Store photo caption stacked */
+  .store-photo-caption { flex-direction: column; align-items: flex-start; gap: 6px; padding: 12px 16px; }
+  /* Contact desc wraps instead of truncating */
+  .c-desc { white-space: normal; }
+  /* Idee box full width submit */
+  .submit-btn { width: 100%; justify-content: center; }
+  /* Modal full width on tiny screens */
+  .modal { border-radius: 16px; }
+}
+@media (max-width: 360px) {
+  /* Logo : réduction extrême pour ne pas déborder */
+  .logo img { height: 52px !important; }
+  .logo-cse-label strong { font-size: 1.1rem; }
+  .logo-cse-label small { display: none; }
+  /* Numéro B : numéro passe en 2 lignes proprement */
+  #section-contacts > div[style*="linear-gradient(135deg,#3a6b35"] span[style*="1.5rem"] {
+    font-size: .95rem !important; word-break: break-all; letter-spacing: 0 !important;
+  }
+  /* Sections encore plus serrées */
+  .section { padding: 0 12px 40px; }
+  .solidarite-banner { padding: 0 12px 24px; }
+  .gear-wrapper { padding: 16px 12px; }
+  /* Equipe grid 2 colonnes minimum */
+  .equipe-grid { grid-template-columns: repeat(auto-fill, minmax(90px, 1fr)); }
+  /* Agenda cards full width */
+  #section-agenda > div[style*="grid"] { grid-template-columns: 1fr !important; }
+}
+
+/* ── ACCESSIBILITÉ CLAVIER (focus-visible) ── */
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+  outline: 2.5px solid var(--orange);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+/* ── IMPRESSION ── */
+@media print {
+  .access-banner, header, .mobile-menu, .hamburger, .badge-live,
+  .store-photo-banner, .hero, .solidarite-banner, footer { display: none !important; }
+  .section { padding: 12px 0; }
+  body { background: #fff; color: #000; }
+  a { color: #000; text-decoration: underline; }
 }
 </style>
 </head>
@@ -459,6 +536,7 @@ footer span { color: var(--orange); font-weight: 700; }
     </div>
   </div>
 </div>
+<div class="hero">
   <div class="hero-bg-text">CSE</div>
   <div class="hero-content">
     <div class="hero-tag">Comité Social &amp; Économique · Boulanger Compiègne</div>
@@ -493,6 +571,11 @@ footer span { color: var(--orange); font-weight: 700; }
     var b = document.getElementById('solidarite-banner'); if(b) b.style.display='none';
     var a = document.getElementById('agenda-solidarite'); if(a) a.style.display='none';
   }
+  // Auto-masquer réunion de valeurs après le 2 avril 2026
+  var deadlineValeurs = new Date(2026, 3, 3);
+  if(d >= deadlineValeurs) {
+    var v = document.getElementById('agenda-valeurs'); if(v) v.style.display='none';
+  }
 })();
 </script>
 
@@ -510,7 +593,7 @@ footer span { color: var(--orange); font-weight: 700; }
         <div class="si"><span class="si-icon">📍</span><div class="si-val">63 rue des Métiers</div><div class="si-lbl">CC de Venette, 60880 Jaux</div></div>
         <div class="si"><span class="si-icon">🕐</span><div class="si-val">09h30 – 19h30</div><div class="si-lbl">Lun – Sam · Fermé dim.</div></div>
       </div>
-      <a href="https://www.boulanger.com/magasins/hauts-de-france/oise/jaux/63-rue-des-metiers" target="_blank" class="store-btn">🏪 Voir la page magasin ↗</a>
+      <a href="https://www.boulanger.com/magasins/hauts-de-france/oise/jaux/63-rue-des-metiers" target="_blank" rel="noopener noreferrer" class="store-btn">🏪 Voir la page magasin ↗</a>
     </div>
   </div>
 </div>
@@ -542,7 +625,7 @@ footer span { color: var(--orange); font-weight: 700; }
       <p style="color:rgba(255,255,255,0.78);font-size:.87rem;line-height:1.65;max-width:580px;">Spécialiste du massage sportif, de la récupération musculaire et de la prévention des troubles musculo-squelettiques (TMS). Le CSE a négocié des <strong style="color:#86EFAC;">tarifs préférentiels jusqu'à −50%</strong>, valables pour vous, votre conjoint(e) et vos enfants.</p>
     </div>
     <div style="display:flex;flex-direction:column;gap:8px;flex-shrink:0;z-index:1;">
-      <a href="https://www.planity.com/recovery-mass-60410-verberie" target="_blank" style="display:inline-flex;align-items:center;gap:8px;background:#16A34A;color:#fff;font-weight:700;font-size:.82rem;padding:10px 20px;border-radius:12px;text-decoration:none;border:1px solid rgba(255,255,255,0.2);">📅 Prendre rendez-vous</a>
+      <a href="https://www.planity.com/recovery-mass-60410-verberie" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:8px;background:#16A34A;color:#fff;font-weight:700;font-size:.82rem;padding:10px 20px;border-radius:12px;text-decoration:none;border:1px solid rgba(255,255,255,0.2);">📅 Prendre rendez-vous</a>
       <a href="tel:0652935204" style="display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,0.1);color:#fff;font-weight:600;font-size:.82rem;padding:10px 20px;border-radius:12px;text-decoration:none;border:1px solid rgba(255,255,255,0.18);">📞 06 52 93 52 04</a>
     </div>
   </div>
@@ -769,19 +852,17 @@ footer span { color: var(--orange); font-weight: 700; }
       <div style="font-size:.78rem;color:#64748B;line-height:1.6;">Journée de travail non rémunérée au profit de l'autonomie des personnes âgées et handicapées.</div>
     </div>
 
-    <!-- Événement à venir -->
-    <div style="background:#fff;border:1px dashed #CBD5E1;border-radius:18px;padding:22px 24px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;min-height:130px;">
-      <div style="font-size:1.6rem;margin-bottom:8px;">✨</div>
-      <div style="font-weight:700;font-size:.88rem;color:var(--text-faint);margin-bottom:4px;">Prochain événement</div>
-      <div style="font-size:.75rem;color:#CBD5E1;">À venir — contactez le CSE<br>pour proposer un événement</div>
+    <!-- Réunion de valeurs HTM -->
+    <div style="background:linear-gradient(135deg,#FDF4FF,#FAE8FF);border:1.5px solid #D8B4FE;border-radius:18px;padding:22px 24px;position:relative;overflow:hidden;" id="agenda-valeurs">
+      <div style="position:absolute;top:10px;right:14px;background:#7C3AED;color:#fff;font-size:.6rem;font-weight:700;padding:3px 9px;border-radius:100px;letter-spacing:.8px;">HTM</div>
+      <div style="font-size:1.4rem;margin-bottom:10px;">💎</div>
+      <div style="font-weight:800;font-size:1rem;color:#4C1D95;margin-bottom:4px;">Réunion de Valeurs</div>
+      <div style="font-size:.82rem;color:#7C3AED;font-weight:700;margin-bottom:6px;">Jeudi 2 avril 2026 à 19h45</div>
+      <div style="font-size:.78rem;color:#64748B;line-height:1.6;">Réunion de valeurs HTM — présence de toute l'équipe souhaitée.</div>
     </div>
 
   </div>
 
-  <div style="margin-top:14px;background:rgba(240,78,0,0.04);border:1px solid rgba(240,78,0,0.12);border-radius:14px;padding:14px 20px;font-size:.78rem;color:var(--text-soft);display:flex;align-items:center;gap:10px;">
-    <span style="font-size:1.1rem;">📌</span>
-    <span>Les dates des réunions sont communiquées par email par les membres du CSE. Pour toute question, contactez un membre du CSE.</span>
-  </div>
 </div>
 
 <!-- CINEMA -->
@@ -809,7 +890,7 @@ footer span { color: var(--orange); font-weight: 700; }
       </div>
       <div style="display:flex;gap:10px;flex-wrap:wrap;">
         <button class="btn-main" onclick="openModal()" style="backdrop-filter:blur(6px);">🎬 Demander des places</button>
-        <a href="https://www.majestic-compiegne.fr" target="_blank" class="btn-ghost" style="backdrop-filter:blur(6px);color:#fff;border-color:rgba(255,255,255,0.35);text-decoration:none;display:inline-flex;align-items:center;gap:6px;">🎥 Voir les séances ↗</a>
+        <a href="https://www.majestic-compiegne.fr" target="_blank" rel="noopener noreferrer" class="btn-ghost" style="backdrop-filter:blur(6px);color:#fff;border-color:rgba(255,255,255,0.35);text-decoration:none;display:inline-flex;align-items:center;gap:6px;">🎥 Voir les séances ↗</a>
       </div>
     </div>
   </div>
@@ -942,21 +1023,21 @@ footer span { color: var(--orange); font-weight: 700; }
 <div class="section">
   <div class="sec-head"><span class="sec-num">10</span><h2 class="sec-title">Suivre Boulanger</h2><div class="sec-line"></div></div>
   <div class="social-grid">
-    <a href="https://www.instagram.com/boulanger/" target="_blank" class="social-card">
+    <a href="https://www.instagram.com/boulanger/" target="_blank" rel="noopener noreferrer" class="social-card">
       <div class="social-icon" style="background:linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5.5" stroke="white" stroke-width="2"/><circle cx="12" cy="12" r="4.5" stroke="white" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.2" fill="white"/></svg>
       </div>
       <div class="social-info"><h4>@boulanger</h4><p>Instagram officiel Boulanger France</p></div>
       <span class="social-arrow">↗</span>
     </a>
-    <a href="https://www.facebook.com/boulanger/" target="_blank" class="social-card">
+    <a href="https://www.facebook.com/boulanger/" target="_blank" rel="noopener noreferrer" class="social-card">
       <div class="social-icon" style="background:linear-gradient(135deg,#1877F2,#0d5fc9);">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="white"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
       </div>
       <div class="social-info"><h4>Boulanger</h4><p>Page Facebook officielle Boulanger France</p></div>
       <span class="social-arrow">↗</span>
     </a>
-    <a href="https://x.com/boulanger" target="_blank" class="social-card">
+    <a href="https://x.com/boulanger" target="_blank" rel="noopener noreferrer" class="social-card">
       <div class="social-icon" style="background:#000;">
         <svg width="22" height="22" viewBox="0 0 24 24" fill="white"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
       </div>
@@ -979,8 +1060,9 @@ footer span { color: var(--orange); font-weight: 700; }
       <p style="margin-top:10px;"><strong>Hébergement</strong><br>
       Ce site est hébergé sur l'infrastructure interne de Boulanger ou par un prestataire désigné par le CSE.</p>
       <p style="margin-top:10px;"><strong>Données personnelles</strong><br>
-      Ce site affiche les prénoms, noms, photos et dates d'anniversaire des collaborateurs du magasin, avec leur consentement.<br>
+      Ce site affiche les prénoms, noms, photos, dates d'anniversaire et années de naissance des collaborateurs du magasin, avec leur consentement.<br>
       Conformément au RGPD (Règlement UE 2016/679) et à la loi Informatique et Libertés, chaque collaborateur dispose d'un droit d'accès, de rectification, d'opposition et de suppression de ses données.<br>
+      <strong>Durée de conservation :</strong> les données sont conservées pendant la durée du contrat de travail du collaborateur. En cas de départ, elles sont supprimées dans un délai de 30 jours sur simple demande auprès du CSE.<br>
       Pour exercer ces droits, contactez le CSE à l'adresse ci-dessus.</p>
       <p style="margin-top:10px;"><strong>Cookies &amp; Traçage</strong><br>
       Ce site n'utilise aucun cookie, aucun traceur et aucun outil d'analyse d'audience. Aucune donnée n'est transmise à des tiers.</p>
@@ -988,6 +1070,9 @@ footer span { color: var(--orange); font-weight: 700; }
       Les formulaires (cinéma, boîte à idées) fonctionnent via votre client de messagerie local (mailto). Aucune donnée n'est enregistrée sur un serveur.</p>
       <p style="margin-top:10px;"><strong>Accès</strong><br>
       Ce site est destiné exclusivement aux salariés du magasin Boulanger Compiègne. Toute diffusion à des tiers est interdite.</p>
+      <p style="margin-top:14px;color:var(--text-faint);font-size:.7rem;border-top:1px solid var(--card-border);padding-top:10px;">
+        Dernière mise à jour des mentions légales : <strong>mars 2026</strong> · Responsable de traitement : CSE Boulanger Compiègne
+      </p>
     </div>
   </details>
 </footer>
@@ -1231,7 +1316,7 @@ function renderContacts(){
       </div>
       <div class="c-right">
         ${it.num?`<span class="c-num">${it.num}</span>`:''}
-        ${it.link?`<a href="${it.link}" target="_blank" class="c-link">↗ Accéder</a>`:''}
+        ${it.link?`<a href="${it.link}" target="_blank" rel="noopener noreferrer" class="c-link">↗ Accéder</a>`:''}
         ${it.badge==='g'?`<span class="c-badge g">✓ Gratuit</span>`:it.badge==='u'?`<span class="c-badge u">⚡ Urgent</span>`:''}
       </div>
     </div>`).join('');
@@ -1240,45 +1325,15 @@ buildCatPills();
 renderContacts();
 
 /* ── CINÉMA ── */
-let affiches=[],allFilms=[],selectedDay=null;
-function emoG(g){if(!g)return'🎬';const l=g.toLowerCase();if(l.includes('horreur')||l.includes('thriller'))return'😱';if(l.includes('comédie')||l.includes('comedie'))return'😂';if(l.includes('animation')||l.includes('famille'))return'🎠';if(l.includes('action')||l.includes('aventure'))return'🦸';if(l.includes('romance'))return'💕';if(l.includes('drame'))return'🎭';if(l.includes('sci')||l.includes('fiction'))return'🚀';return'🎬';}
-function renderDays(films){const days=new Set();films.forEach(f=>(f.horaires||[]).forEach(h=>days.add(h.jour)));document.getElementById('days-nav').innerHTML=`<button class="day-btn on" onclick="filterDay(null,this)">Tous</button>`+[...days].slice(0,8).map(d=>`<button class="day-btn" onclick="filterDay('${d}',this)">${d}</button>`).join('');}
-function renderFilms(films,fd){const wrap=document.getElementById('seances-wrap');let list=films;if(fd){list=films.map(f=>({...f,horaires:(f.horaires||[]).filter(h=>h.jour===fd)})).filter(f=>f.horaires.length);}if(!list.length){wrap.innerHTML=`<div class="seances-error">Aucune séance trouvée pour ce jour.</div>`;return;}wrap.innerHTML=`<div class="films-list">${list.map(film=>{const a=affiches.find(x=>x.titre&&x.titre.toLowerCase()===film.titre.toLowerCase());const thumbHtml=a&&a.posterUrl&&a.posterUrl.startsWith('http')?`<div class="film-thumb"><img src="${a.posterUrl}" alt="${film.titre}" onerror="this.parentElement.innerHTML='${emoG(film.genre)}'"></div>`:`<div class="film-thumb">${emoG(film.genre)}</div>`;return`<div class="film-item">${thumbHtml}<div class="film-infos"><div class="film-title">${film.titre}${film.genre?`<span class="tag-genre">${film.genre}</span>`:``}${film.age?`<span class="tag-age">${film.age}</span>`:''}</div><div class="film-meta">${film.duree?`<span>⏱ ${film.duree}</span>`:''}${film.realisateur?`<span>🎥 ${film.realisateur}</span>`:''}</div></div><div class="horaires-wrap">${(film.horaires||[]).map(h=>`<div>${!fd?`<div class="jour-label">${h.jour}</div>`:''}<div class="slots">${(h.creneaux||[]).map(c=>`<a href="${c.url||'https://www.majestic-compiegne.fr'}" target="_blank" class="slot">${c.heure}${c.version&&c.version!=='VF'?`<span class="ver${c.version.toLowerCase().includes('ice')?' ice':''}">${c.version}</span>`:''}</a>`).join('')}</div></div>`).join('')}</div></div>`;}).join('')}</div><div style="text-align:center;margin-top:14px;"><a href="https://www.majestic-compiegne.fr" target="_blank" style="font-size:.72rem;color:var(--text-faint);text-decoration:none;">↗ Programme complet sur majestic-compiegne.fr</a></div>`;}
-function filterDay(d,btn){selectedDay=d;document.querySelectorAll('.day-btn').forEach(b=>b.classList.remove('on'));btn.classList.add('on');renderFilms(allFilms,d);}
 
-
-function loadSeances(force){
-  const wrap=document.getElementById('seances-wrap'),dot=document.getElementById('live-dot'),upd=document.getElementById('last-update');
-  dot.style.background='#4ADE80';
-  upd.textContent='Voir sur le site officiel';
-  wrap.innerHTML=`
-    <div style="text-align:center;padding:32px 16px;">
-      <div style="font-size:2.8rem;margin-bottom:12px;">🎬</div>
-      <div style="font-weight:700;font-size:1.05rem;color:var(--noir);margin-bottom:8px;">Cinéma Majestic Compiègne</div>
-      <div style="color:var(--text-soft);font-size:.85rem;margin-bottom:20px;max-width:320px;margin-left:auto;margin-right:auto;">
-        Retrouvez le programme complet des séances, les horaires et la billetterie directement sur le site officiel.
-      </div>
-      <a href="https://www.majestic-compiegne.fr" target="_blank"
-         style="display:inline-block;background:var(--orange);color:#fff;font-weight:700;font-size:.92rem;
-                padding:12px 28px;border-radius:10px;text-decoration:none;letter-spacing:.02em;">
-        🎥 Voir les séances ↗
-      </a>
-      <div style="margin-top:24px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
-        <a href="https://www.majestic-compiegne.fr" target="_blank"
-           style="font-size:.75rem;color:var(--text-faint);text-decoration:none;border:1px solid var(--border);
-                  padding:6px 14px;border-radius:20px;">📅 Programme semaine</a>
-        <a href="https://www.majestic-compiegne.fr" target="_blank"
-           style="font-size:.75rem;color:var(--text-faint);text-decoration:none;border:1px solid var(--border);
-                  padding:6px 14px;border-radius:20px;">🎟️ Réserver en ligne</a>
-      </div>
-    </div>`;
+function loadSeances(){
+  // Cinéma géré via lien externe majestic-compiegne.fr
 }
 
 /* ── MODAL ── */
 function openModal(){document.getElementById('modal').classList.add('open');}
 function closeModal(){document.getElementById('modal').classList.remove('open');}
 document.getElementById('modal').addEventListener('click',e=>{if(e.target===document.getElementById('modal'))closeModal();});
-function scrollToTable(){document.getElementById('tableau-demandes').scrollIntoView({behavior:'smooth'});}
 function updateTotal(){const n=parseInt(document.getElementById('m-places').value)||0;document.getElementById('total-display').textContent=(n*5)+'€';}
 
 /* ── TOAST ── */
@@ -1292,13 +1347,6 @@ function confirmDemande(){
   const film=document.getElementById('m-film').value.trim()||'Au choix';
   const date=document.getElementById('m-date').value.trim()||'À définir';
   if(!name){document.getElementById('m-name').style.borderColor='#F04E00';document.getElementById('m-name').focus();return;}
-  const p=name.split(' ');let dn=p[0];if(p.length>1)dn+=' '+p[p.length-1][0]+'.';
-  const tbody=document.getElementById('demandes-tbody');
-  const emptyRow=tbody.querySelector('td[colspan]');
-  if(emptyRow)emptyRow.closest('tr').remove();
-  const tr=document.createElement('tr');
-  tr.innerHTML=`<td>${dn}</td><td>${places}</td><td>${tot}€</td><td>${film}</td><td>${date}</td><td><span class="chip wait">⌛ En attente</span></td>`;
-  tbody.appendChild(tr);
   // Envoi par email aux membres du CSE
   const cseEmails=atob('c2FicmluYS5ncmFzb25AYm91bGFuZ2VyLmNvbQ==')+',' +atob('Y2xhaXJlLmNoYXBpbkBib3VsYW5nZXIuY29t')+','+atob('c3RlcGhhbmllLnBlY2tldUBib3VsYW5nZXIuY29t')+','+atob('cXVlbnRpbi5yYW11c0Bib3VsYW5nZXIuY29t')+','+atob('Y2xlbWVudC5tYWxhcmRAYm91bGFuZ2VyLmNvbQ==')+','+atob('dmlyZ2luaWUudGVpeGVpcmExQGJvdWxhbmdlci5jb20=');
   const subject=encodeURIComponent('[CSE Boulanger] Demande de places cinéma — '+name);
@@ -1322,7 +1370,7 @@ function submitIdea(){
   showToast('💡 Merci ! Votre messagerie va s\'ouvrir.');
 }
 
-loadSeances(false);
+loadSeances();
 
 /* ── BANNIÈRE ACCÈS ── */
 if (sessionStorage.getItem('banner_ok')) {
